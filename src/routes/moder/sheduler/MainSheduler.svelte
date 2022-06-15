@@ -1,5 +1,5 @@
 <script>
-import Default from "../../../DEFAULT.svelte";
+	import Default from "../../../DEFAULT.svelte";
 
 
 	/**@type {boolean}*/
@@ -64,7 +64,8 @@ import Default from "../../../DEFAULT.svelte";
 				>
 			</div>
 		</div>
-	{:catch}
+	{:catch err}
+		{err}
 		<Default />
 	{/await}
 </main>
