@@ -29,10 +29,10 @@
 <LoginForm
 	{reason}
 	clickHandler={click_handler}
-	title_text="Zarejestruj się"
-	footer_text="Zaloguj się"
+	title_text="Sign up"
+	footer_text="Log in"
    link = "login"
-   reason_text="Dany login już istnieje, lub jesteś już zalogowany,"
+   reason_text="The given login already exists, or you are already logged in"
 />
 
 <style>

@@ -15,9 +15,9 @@
 		 */
 
 		/**@type {{[x in "reserved"|"archived"]: resDataType}}*/
-		let data = await res.json();				
+		let data = await res.json();
 
-		return data;		
+		return data;
 	}
 	let applications = get_application();
 
@@ -33,14 +33,14 @@
 	};
 
 	const mainTitleEnum = {
-		archived: "archiwum",
-		reserved: "aktualne",
+		archived: "archived",
+		reserved: "reserved",
 	};
 </script>
 
 <main class="w-max m-auto">
 	{#await applications}
-		<h2 class="text-white text-center m-20 text-5xl">Ładuję aplikcaje</h2>
+		<h2 class="text-white text-center m-20 text-5xl">Loading...</h2>
 	{:then res}
 		<div
 			class="p-5 w-max mx-auto rounded-lg border-solid border-8 border-gray-700"
@@ -48,9 +48,9 @@
 			<!-- --------- -->
 			<!-- Option -->
 			<!-- --------- -->
-			<h1 class="text-gray-200 w-full text-center mb-6">Opcje</h1>
+			<h1 class="text-gray-200 w-full text-center mb-6">Options</h1>
 
-			<h1 class="text-gray-200 text-center">Grupowanie:</h1>
+			<h1 class="text-gray-200 text-center">Grouping:</h1>
 
 			<!-- ------ -->
 			<!-- switch -->
@@ -66,11 +66,11 @@
 				class="text-gray-200, my-2 gap-3"
 				style="display:grid; grid-template-columns: repeat(2,auto); justify-content:space-between"
 			>
-				<h1 class="text-gray-200">Aktualne:</h1>
+				<h1 class="text-gray-200">Current:</h1>
 				<div class="flex justify-center items-center">
 					<input type="checkbox" bind:checked={checkboxes.reserved} />
 				</div>
-				<h1 class="text-gray-200">Zarchiwizowane:</h1>
+				<h1 class="text-gray-200">Archived:</h1>
 				<div class="flex justify-center items-center">
 					<input type="checkbox" bind:checked={checkboxes.archived} />
 				</div>
@@ -94,7 +94,7 @@
 							{#if itemRes[1].byStatus.waiting}
 								<ApplicationComp
 									obj_element={itemRes[1].byStatus.waiting}
-									title="Oczekujący"
+									title="Waiting"
 									reservedBool={false}
 									sortType="byStatus"
 								/>
@@ -102,7 +102,7 @@
 							{#if itemRes[1].byStatus.reserved}
 								<ApplicationComp
 									obj_element={itemRes[1].byStatus.reserved}
-									title="Zarezerwowany"
+									title="Reserved"
 									reservedBool={true}
 									sortType="byStatus"
 								/>
@@ -114,7 +114,7 @@
 							{#if itemRes[1].byStatus.ended}
 								<ApplicationComp
 									obj_element={itemRes[1].byStatus.ended}
-									title="Zakończone"
+									title="Ended"
 									reservedBool={false}
 									sortType="byStatus"
 								/>
@@ -122,7 +122,7 @@
 							{#if itemRes[1].byStatus.canceled}
 								<ApplicationComp
 									obj_element={itemRes[1].byStatus.canceled}
-									title="Odrzucone"
+									title="Cancelled"
 									reservedBool={false}
 									sortType="byStatus"
 								/>

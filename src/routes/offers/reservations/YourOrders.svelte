@@ -95,7 +95,7 @@
 
 <main class=" w-min m-auto">
 	{#await awaitReserved}
-		<h2 class="text-white text-center m-20 text-5xl">Ładuję</h2>
+		<h2 class="text-white text-center m-20 text-5xl">Loading</h2>
 	{:then res}
 		<!-- --------- -->
 		<!-- filtering -->
@@ -106,22 +106,22 @@
 			<!-- --------- -->
 			<!-- Option -->
 			<!-- --------- -->
-			<h1 class="text-gray-200 w-full text-center mb-6">Opcje</h1>
+			<h1 class="text-gray-200 w-full text-center mb-6">Options</h1>
 
-			<h1 class="text-gray-200">Zamówienia:</h1>
+			<h1 class="text-gray-200">Orders:</h1>
 			<div
 				class="text-gray-200, my-2"
 				style="display:grid; grid-template-columns: repeat(2,auto); justify-content:space-between"
 			>
-				<h1 class="text-gray-200">Aktualne:</h1>
+				<h1 class="text-gray-200">Current:</h1>
 				<div class="flex justify-center items-center">
 					<input type="checkbox" bind:checked={checkboxes.reserved} />
 				</div>
-				<h1 class="text-gray-200">Zakończone:</h1>
+				<h1 class="text-gray-200">Ended:</h1>
 				<div class="flex justify-center items-center">
 					<input type="checkbox" bind:checked={checkboxes.ended} />
 				</div>
-				<h1 class="text-gray-200">Odrzucone:</h1>
+				<h1 class="text-gray-200">Cancelled:</h1>
 				<div class="flex justify-center items-center">
 					<input type="checkbox" bind:checked={checkboxes.canceled} />
 				</div>
@@ -131,7 +131,7 @@
 			<!-- car model -->
 			<!-- --------- -->
 			<h1 class="text-gray-200 w-full text-center mt-6 mb-2">
-				Filtruj po nazwie
+				Filter by model
 			</h1>
 			<input
 				class="bg-transparent text-gray-200 w-full"
@@ -141,7 +141,7 @@
 			/>
 
 			<h1 class="text-gray-200 w-full text-center mt-6 mb-2">
-				Sortowanie po czasie rezerwacji
+				Sorting by booking time
 			</h1>
 
 			<select
@@ -149,17 +149,17 @@
 				on:change={filter_reservations}
 				class="bg-transparent text-gray-100 w-full"
 			>
-				<option class="bg-gray-900 text-gray-100" value="disabled">Brak</option>
+				<option class="bg-gray-900 text-gray-100" value="disabled">Blank</option>
 				<option class="bg-gray-900 text-gray-100" value="descending"
-					>Malejąco</option
+					>Descending</option
 				>
 				<option class="bg-gray-900 text-gray-100" value="ascending"
-					>Rosnąco</option
+					>Ascending</option
 				>
 			</select>
 
 			<h1 class="text-gray-200 w-full text-center mt-6 mb-2">
-				czas rozpoczęcia
+				start time
 			</h1>
 			<input
 				bind:value={start_time}
@@ -168,7 +168,7 @@
 				type="date"
 			/>
 			<h1 class="text-gray-200 w-full text-center mt-6 mb-2">
-				czas zakończenia
+				End time
 			</h1>
 			<input
 				bind:value={end_time}
@@ -182,13 +182,13 @@
 			<div
 				class="rounded-lg my-5 bg-gray-800 bg-opacity-40 p-8 text-gray-100 m-4"
 			>
-				<div>Twoje aktualne zamówienia</div>
+				<div>Your current orders</div>
 
 				<div class="car-link mt-7 m-4 px-8">
-					<div>Nazwa</div>
-					<div>Czas rezerwacji</div>
+					<div>Name</div>
+					<div>Booking time</div>
 					<div>Start</div>
-					<div>Koniec</div>
+					<div>End</div>
 				</div>
 
 				{#each res.reserved as item, i}
@@ -210,11 +210,11 @@
 			<div
 				class="rounded-lg my-5 bg-gray-800 bg-opacity-40 p-8 text-gray-100 m-4"
 			>
-				<div>Zakończone zamówienia</div>
+				<div>Completed orders</div>
 
 				<div class="car-link mt-7 m-4 px-8">
-					<div>Nazwa</div>
-					<div>Czas rezerwacji</div>
+					<div>Name</div>
+					<div>Booking time</div>
 					<div>start time</div>
 					<div>end time</div>
 				</div>
@@ -237,11 +237,11 @@
 			<div
 				class="rounded-lg my-5 bg-gray-800 bg-opacity-40 p-8 text-gray-100 m-4"
 			>
-				<div>Odrzucone zamówienia</div>
+				<div>Rejected orders</div>
 
 				<div class="car-link mt-7 m-4 px-8">
-					<div>Nazwa</div>
-					<div>Czas rezerwacji</div>
+					<div>Name</div>
+					<div>Booking time</div>
 					<div>start time</div>
 					<div>end time</div>
 				</div>

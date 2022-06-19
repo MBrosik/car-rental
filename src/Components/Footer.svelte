@@ -18,7 +18,7 @@
 			>
 				<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
 			</svg>
-			<span class="ml-3 text-xl">Wypożyczalnia</span>
+			<span class="ml-3 text-xl">Car rental</span>
 		</a>
 		
 		<p
@@ -28,7 +28,7 @@
 				href="./#/regulamin"
 				class="text-gray-500 ml-1"
 				target="_blank"
-				rel="noopener noreferrer">Regulamin</a
+				rel="noopener noreferrer">Statute</a
 			>
 		</p>     
 		<span

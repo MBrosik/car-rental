@@ -148,10 +148,10 @@
 		</h2>
 
 		{#if status == "open"}
-			<h2 class="text-green-400 w-2/3 ">Brak oczekiwań</h2>
+			<h2 class="text-green-400 w-2/3 ">Openned</h2>
 		{:else if status == "waiting"}
 			<h2>
-				<h2 class="text-yellow-600">Parę osób oczekuje</h2>
+				<h2 class="text-yellow-600">A couple of people are waiting</h2>
 			</h2>
 		{/if}
 
@@ -171,7 +171,7 @@
 			</svg>
 			<span
 				>{count}
-				{#if are_you_waiting}- w tym również ty{/if}</span
+				{#if are_you_waiting}- including you{/if}</span
 			>
 		</span>
 		<h2
@@ -183,7 +183,7 @@
             w-2/3
          "
 		>
-			{price_per_day.toFixed(2)} zł/dzień
+			{price_per_day.toFixed(2)} PLN/day
 		</h2>
 
 		<!-- --------------- -->
@@ -191,7 +191,7 @@
 		<!-- --------------- -->
 
 		<span class="w-2/3 text-left text-gray-500 text-xs my-2">
-			Data początkowa:
+			Start date:
 		</span>
 		<input
 			bind:value={start_time}
@@ -204,7 +204,7 @@
 		/>
 
 		<span class="w-2/3 text-left text-gray-500 text-xs my-2">
-			Data końcowa:
+			End date:
 		</span>
 		<input
 			bind:value={end_time}
@@ -221,7 +221,7 @@
 		<!-- --------------- -->
 
 		<span class="w-2/3 text-left text-red-600 text-lg my-2"
-			>Koszt: {calculated_cost} zł</span
+			>Cost: {calculated_cost} PLN</span
 		>
 
 		<!-- --------------- -->
@@ -230,13 +230,13 @@
 
 		<button
 			class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
-			on:click={submit_button}>Zatwierdź</button
+			on:click={submit_button}>Submit</button
 		>
 
 		{#if are_you_waiting}
 			<button
 				class="text-white bg-red-500 border-0 py-2 px-8 my-2 focus:outline-none hover:bg-red-600 rounded text-lg"
-				on:click={reject_handler}>Usuń</button
+				on:click={reject_handler}>Delete</button
 			>
 		{/if}
 	</div>

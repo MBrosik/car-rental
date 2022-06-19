@@ -114,13 +114,13 @@
 				class="text-white bg-green-500 border-0 py-2 px-8 my-2 focus:outline-none hover:bg-green-600 rounded text-sm"
 				on:click={reservedBool ? updateDates : submit}
 			>
-				{reservedBool ? "Zaktualizuj" : "Zatwierdź"}
+				{reservedBool ? "Update" : "Confirm"}
 			</button>
 			<button
 				class="text-white bg-red-500 border-0 py-2 px-8 my-2 focus:outline-none hover:bg-red-600 rounded text-sm"
 				on:click={deleteReservation}
 			>
-				Usuń
+				Delete
 			</button>
 		{/if}
 	</div>

@@ -31,10 +31,10 @@
 <LoginForm
 	{reason}
 	clickHandler={click_handler}
-	title_text="Zaloguj się"
-	footer_text="Zarejestruj się"
+	title_text="Log in"
+	footer_text="Sign up"
 	link="register"
-	reason_text="Zły login lub hasło, lub jesteś już zalogowany, lub konto nie jest aktywowane"
+	reason_text="Wrong login or password, or you are already logged in, or your account has not been activated"
 />
 
 <style>

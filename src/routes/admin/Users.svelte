@@ -26,10 +26,10 @@
 	// -----------
 
 	let textObject = {
-		moderator: ["Inni", "moderatorzy"],
-		admin: ["Inni", "admini"],
-		user: ["Inni", "użytkownicy"],
-		activated: ["Konta nieaktywowane", "Konta aktywowane"],
+		moderator: ["Others", "Moders"],
+		admin: ["Others", "Admins"],
+		user: ["Others", "Users"],
+		activated: ["Inactive accounts", "Active accounts"],
 	};
 
 	/**@type {"moderator"|"admin"|"activated"|"user"}*/
@@ -57,13 +57,13 @@
 
 <main class="w-max m-auto">
 	{#await awaitUsers}
-		<h2 class="text-white text-center m-20 text-5xl">Ładuję stronę</h2>
+		<h2 class="text-white text-center m-20 text-5xl">Loading...</h2>
 	{:then res}		
 		<div class="">
 			<div
 				class="p-5 w-min mx-auto rounded-lg border-solid border-8 border-gray-700"
 			>
-				<h1 class="text-gray-200 w-full text-center mb-6">Opcje</h1>
+				<h1 class="text-gray-200 w-full text-center mb-6">Options</h1>
 				<select
 					bind:value={groupByFilterBind}
 					on:change={filter_user_fun}
@@ -74,17 +74,17 @@
 					>
 					>
 					<option class="bg-gray-900 text-gray-100" value="admin"
-						>Administrator</option
+						>Admin</option
 					>
 					<option class="bg-gray-900 text-gray-100" value="user"
-						>Użytkowik</option
+						>User</option
 					>
 					>
 					<option class="bg-gray-900 text-gray-100" value="activated"
-						>Aktywne</option
+						>Active</option
 					>
 				</select>
-				<h1 class="text-gray-200 w-full text-center my-6">Nazwa Użytkownika</h1>
+				<h1 class="text-gray-200 w-full text-center my-6">User name</h1>
 				<input
 					class="bg-transparent text-gray-200"
 					type="text"

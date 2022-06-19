@@ -34,7 +34,7 @@
 		});
 
 		data = await res.json();
-		
+
 		return data;
 	}
 
@@ -122,9 +122,7 @@
 			<!-- -------------------- -->
 
 			{#if new Date(res.end_time).getTime() < res.date_now && params.orderType == "reserved"}
-				<h2 class="w-2/3 text-red-600 text-xs text-center">
-					Auto jest przetrzymywane
-				</h2>
+				<h2 class="w-2/3 text-red-600 text-xs text-center">Car is held</h2>
 			{/if}
 			<h2
 				class="tracking-widest text-base text-center w-2/3 h-14 title-font font-medium text-gray-500 mb-1 my-2"
@@ -137,7 +135,7 @@
 			<!-- dates -->
 			<!-- ----- -->
 			<span class="w-2/3 text-left text-gray-500 text-xs my-2">
-				Data rezerwacji:
+				Reservation Date:
 			</span>
 			<input
 				value={res.reserve_time}
@@ -146,7 +144,7 @@
 				disabled
 			/>
 			<span class="w-2/3 text-left text-gray-500 text-xs my-2">
-				Data początkowa:
+				Start Date:
 			</span>
 			<input
 				value={res.start_time}
@@ -156,7 +154,7 @@
 			/>
 
 			<span class="w-2/3 text-left text-gray-500 text-xs my-2">
-				Data końcowa:
+				End Date:
 			</span>
 			<input
 				value={res.end_time}
@@ -169,7 +167,7 @@
 			<!-- payments -->
 			<!-- -------- -->
 			<h2 class="text-gray-500 text-left text-xs my-2 w-2/3">
-				Cena za godzinę: {res.price_per_day.toFixed(2)} zł/dzień
+				Price per hour: {res.price_per_day.toFixed(2)} PLN/day
 			</h2>
 
 			<h2
@@ -177,14 +175,18 @@
 					res.status == "canceled" ? "text-gray-100" : "text-red-600"
 				} text-lg my-2`}
 			>
-				Należność: {getPayment(res.start_time, res.end_time, res.price_per_day)}
+				Receivable: {getPayment(
+					res.start_time,
+					res.end_time,
+					res.price_per_day
+				)}
 				zł
 			</h2>
 
 			{#if params.orderType == "reserved"}
 				<button
 					class="text-white bg-red-500 border-0 py-2 px-8 my-2 focus:outline-none hover:bg-red-600 rounded text-lg"
-					on:click={reject_handler}>Anuluj</button
+					on:click={reject_handler}>Cancell</button
 				>
 			{/if}
 		</div>

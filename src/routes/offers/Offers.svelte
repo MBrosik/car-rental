@@ -31,8 +31,8 @@
 	let parsed_end_date_now= ""
 
 	const statusEnum = {
-		open: "Otwarte",
-		waiting: "W trakcie oczekiwania",
+		open: "Openned",
+		waiting: "While waiting",
 	};
 
 	async function getOffers() {
@@ -109,11 +109,11 @@
 
 <main>
 	{#await offers}
-		<h1 class="text-white text-center m-20 text-5xl">Ładuję oferty</h1>
+		<h1 class="text-white text-center m-20 text-5xl">Loading...</h1>
 	{:then res}
 		{#if code == -1}
 			<h1 class="text-red-600 text-center m-20 text-5xl">
-				Przetrzymujesz jedno auto!
+				You're holding one car!
 			</h1>
 		{:else}
 			<!-- flex items-center flex-col gap-3 -->
@@ -127,28 +127,28 @@
 				<!-- --------- -->
 				<!-- Option -->
 				<!-- --------- -->
-				<h1 class="text-gray-200 w-full text-center mb-6">Opcje</h1>
+				<h1 class="text-gray-200 w-full text-center mb-6">Options</h1>
 				<select
 					bind:value={filter_waiting_bind}
 					on:change={filter_waiting}
 					class="bg-transparent text-gray-100"
 				>
 					<option class="bg-gray-900 text-gray-100" value="all"
-						>Wszystkie</option
+						>All</option
 					>
-					<option class="bg-gray-900 text-gray-100" value="open">Otwarte</option
+					<option class="bg-gray-900 text-gray-100" value="open">Open</option
 					>
 					<option class="bg-gray-900 text-gray-100" value="waiting"
-						>Oczekujące</option
+						>Waiting</option
 					>
 					<option class="bg-gray-900 text-gray-100" value="your_waiting"
-						>Oczekujące przez Ciebie</option
+						>Your waiting</option
 					>
 				</select>
 				<!-- --------- -->
 				<!-- car model -->
 				<!-- --------- -->
-				<h1 class="text-gray-200 w-full text-center my-6">Nazwa modelu</h1>
+				<h1 class="text-gray-200 w-full text-center my-6">Model name</h1>
 				<input
 					class="bg-transparent text-gray-200 w-full"
 					type="text"
@@ -160,7 +160,7 @@
 				<!-- price sorting -->
 				<!-- ------------- -->
 				<h1 class="text-gray-200 w-full text-center my-6">
-					Sortowanie po cenie
+					Sorting by price
 				</h1>
 				<select
 					bind:value={sort_price}
@@ -168,13 +168,13 @@
 					class="bg-transparent text-gray-100 w-full"
 				>
 					<option class="bg-gray-900 text-gray-100" value="disabled"
-						>Brak</option
+						>Blank</option
 					>
 					<option class="bg-gray-900 text-gray-100" value="descending"
-						>Malejąco</option
+						>Descending</option
 					>
 					<option class="bg-gray-900 text-gray-100" value="ascending"
-						>Rosnąco</option
+						>Ascending</option
 					>
 				</select>
 			</div>

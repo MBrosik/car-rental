@@ -55,7 +55,7 @@
 			class="text-white bg-green-500 w-min border-0 py-2 px-8 my-2 focus:outline-none hover:bg-green-600 rounded text-sm"
 			on:click={submit}
 		>
-			Zatwierdź
+			Submit
 		</button>
 	{/if}
 </div>

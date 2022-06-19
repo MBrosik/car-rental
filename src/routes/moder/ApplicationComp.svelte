@@ -13,10 +13,10 @@
 
 
 	const titleEnum = {
-		reserved:"Zarezerwowany",
-		waiting:"Oczekujący",
-		canceled:"Odrzucony",
-		ended:"Zakończony",
+		reserved:"Reserved",
+		waiting:"Waiting",
+		canceled:"Canceled",
+		ended:"Ended",
 	}
 </script>
 
@@ -32,9 +32,9 @@
 
 				<div class="px-8 pt-8 text-gray-100  description mx-4 text-sm">
 					<div>Login</div>
-					<div>Czas rezerwacji</div>
-					<div>Początek rezerwacji</div>
-					<div>Koniec rezerwacji</div>
+					<div>Reservation time</div>
+					<div>Start time</div>
+					<div>End time</div>
 				</div>
 
 				{#each item[1] as item, i}
@@ -50,10 +50,10 @@
 				<h2>{titleEnum[item[0]]}</h2>
 
 				<div class="px-8 pt-8 text-gray-100  description mx-4 text-sm">
-					<div>Nazwa</div>
-					<div>Czas rezerwacji</div>
-					<div>Początek rezerwacji</div>
-					<div>Koniec rezerwacji</div>
+					<div>Name</div>
+					<div>Reservation time</div>
+					<div>Start time</div>
+					<div>End time</div>
 				</div>
 
 				{#each item[1] as item, i}

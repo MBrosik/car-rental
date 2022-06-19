@@ -36,12 +36,12 @@
 <main class=" w-1/2 m-auto mt-5">	
 
 	{#await awaitData}
-		<h2 class="text-white text-center m-20 text-5xl">Ładuję</h2>
+		<h2 class="text-white text-center m-20 text-5xl">Loading</h2>
 	{:then}
 		<div
 			class="p-5 w-max mx-auto rounded-lg border-solid border-8 border-gray-700"
 		>
-			<h1 class="text-gray-200 text-center">Zegar serwerowy:</h1>
+			<h1 class="text-gray-200 text-center">Server Clock:</h1>
 
 			<div class="flex justify-center items-center mt-5">
 				<label class="switch">
@@ -60,7 +60,7 @@
 			<div class="flex justify-center items-center mt-5">
 				<button
 					class="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg"
-					on:click={updateData}>Zatwierdź</button
+					on:click={updateData}>Submit</button
 				>
 			</div>
 		</div>
