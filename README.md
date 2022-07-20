@@ -18,6 +18,7 @@ Simple car rental website. Like Bolt.
 
 ## Installation
  - Download repo
+ - In terminal run: `npm i` and `npm run build`
  - Install [XAMP](https://www.apachefriends.org/pl/index.html)
  - Files from [public](https://github.com/MBrosik/car-rental/tree/master/public) copy to XAMP "htdocs" folder
  - Import [databes](https://github.com/MBrosik/car-rental/tree/master/db/car_rental.sql) and name that: "car_rental"
