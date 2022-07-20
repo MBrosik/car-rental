@@ -8,13 +8,13 @@ Simple car rental website. Like Bolt.
 ## Interface
 
 ### Offers
-![Untitled-1](https://user-images.githubusercontent.com/63966121/173819932-754b3a86-a0a0-4ef3-a001-2b801e19d86c.png)
+![Offers](https://user-images.githubusercontent.com/63966121/174498681-c4028561-7aeb-41b3-bd89-28f46cbd873e.png)
 
 ### Users
-![Untitled-2](https://user-images.githubusercontent.com/63966121/173820604-c027bc42-8809-45ab-9b26-d22a1bd5322f.png)
+![Users](https://user-images.githubusercontent.com/63966121/174498778-cf04488a-55e5-4b1b-985f-c684a097d39a.png)
 
 ### Your reservations
-![image](https://user-images.githubusercontent.com/63966121/173820931-8b0ceb8f-f066-49ac-acee-54c59ca9c108.png)
+![reservations](https://user-images.githubusercontent.com/63966121/174498794-d00f8a44-7da5-4ea1-87c9-36dd162a846f.png)
 
 ## Installation
  - Download repo
